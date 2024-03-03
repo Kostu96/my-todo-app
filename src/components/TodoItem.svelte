@@ -6,10 +6,10 @@
   const dispatch = createEventDispatcher();
 </script>
 
-<ListgroupItem class="text-base font-semibold gap-2 flex">
-  <span class="grow"><slot /></span>
+<ListgroupItem class="gap-2 flex items-center">
+  <span class="text-base font-semibold grow"><slot /></span>
   <ButtonGroup>
-    <Button><EditSolid /></Button> 
-    <Button color="red" on:click={() => dispatch("delete")}><TrashBinSolid /></Button>
+    <Button outline color="dark"><EditSolid /></Button> 
+    <Button outline color="red" on:click={() => dispatch("delete")}><TrashBinSolid /></Button>
   </ButtonGroup>
 </ListgroupItem>
